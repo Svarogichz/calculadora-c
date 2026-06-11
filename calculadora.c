@@ -1,16 +1,17 @@
 #include <stdio.h>
 
 void suma();
-float resta(float,float);
-void multiplicacion();
-float division(float,float);
+void resta();
 
 int main() {
     printf("Calculadora sencilla\n");
+
     suma();
-    printf("Resultado resta: %.2f\n", resta(10,5));
+    resta();
+
     return 0;
 }
+
 void suma() {
     float a, b;
     printf("Ingresa dos numeros para sumar: ");
@@ -18,6 +19,9 @@ void suma() {
     printf("Resultado suma: %.2f\n", a + b);
 }
 
-float resta(float a, float b) {
-    return a - b;
+void resta() {
+    float a, b;
+    printf("Ingresa dos numeros para restar: ");
+    scanf("%f %f", &a, &b);
+    printf("Resultado resta: %.2f\n", a - b);
 }
